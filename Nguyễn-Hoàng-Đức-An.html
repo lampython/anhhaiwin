@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nguyễn Hoàng Đức An - Người Mẫu Nhí</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4ECCA3',secondary:'#E7F9F1'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Quicksand', sans-serif;
+background-color: #FFFCF9;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.portfolio-grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+gap: 1.5rem;
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 3.5rem;
+height: 1.75rem;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 34px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 1.25rem;
+width: 1.25rem;
+left: 0.25rem;
+bottom: 0.25rem;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #FF9AA2;
+}
+input:checked + .slider:before {
+transform: translateX(1.75rem);
+}
+</style>
+</head>
+<body>
+<header class="w-full bg-gradient-to-b from-primary/10 to-transparent">
+<div class="container mx-auto px-4 py-8">
+<nav class="flex justify-between items-center mb-12">
+<div class="text-3xl font-['Pacifico'] text-primary">Đức An</div>
+<div class="hidden md:flex space-x-6">
+<a href="#about" class="text-gray-700 hover:text-primary transition-colors">Giới Thiệu</a>
+<a href="#portfolio" class="text-gray-700 hover:text-primary transition-colors">Bộ Sưu Tập</a>
+<a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Liên Hệ</a>
+</div>
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</nav>
+<div class="flex flex-col md:flex-row items-center gap-8 py-12">
+<div class="w-full md:w-1/2 flex flex-col items-center md:items-start">
+<h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+<span class="mr-2">👶</span> Nguyễn Hoàng Đức An
+</h1>
+<p class="text-lg text-gray-600 mb-8 text-center md:text-left">Người mẫu nhí đáng yêu với nụ cười tỏa nắng và sự hợp tác tuyệt vời trước ống kính</p>
+<div class="flex gap-4">
+<a href="#contact" class="bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors">
+Liên Hệ Ngay
+</a>
+<a href="#portfolio" class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-gray-50 transition-colors">
+Xem Bộ Sưu Tập
+</a>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<div class="relative w-full aspect-square max-w-md mx-auto">
+<div class="absolute inset-0 bg-secondary/20 rounded-full -rotate-6"></div>
+<div class="absolute inset-0 bg-primary/20 rounded-full rotate-6"></div>
+<img
+src="https://readdy.ai/api/search-image?query=adorable%20baby%20boy%20with%20big%20smile%2C%201%20year%20old%2C%20asian%20baby%2C%20professional%20portrait%20photography%2C%20soft%20lighting%2C%20studio%20background%2C%20high%20quality%2C%20detailed%2C%20cute%20baby%20face%20closeup&width=600&height=600&seq=1&orientation=squarish"
+alt="Nguyễn Hoàng Đức An"
+class="absolute inset-0 w-full h-full object-cover object-top rounded-full border-4 border-white shadow-lg"
+>
+</div>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 py-12">
+<section id="about" class="mb-20">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-800 mb-2">Thông Tin Cá Nhân</h2>
+<p class="text-gray-600">Tìm hiểu thêm về người mẫu nhí đáng yêu của chúng tôi</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+<i class="ri-calendar-line ri-lg"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Ngày Sinh</h3>
+<p class="text-gray-600">06/12/2024</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+<i class="ri-ruler-line ri-lg"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Chiều Cao & Cân Nặng</h3>
+<p class="text-gray-600">73cm / 10kg</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+<i class="ri-brain-line ri-lg"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Tính Cách</h3>
+<p class="text-gray-600">Dễ thương, hợp tác tốt, thích ống kính</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+<i class="ri-camera-line ri-lg"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Kinh Nghiệm</h3>
+<p class="text-gray-600">Từng chụp bộ đồ con chó, chim cánh cụt</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+<i class="ri-heart-line ri-lg"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Sở Thích</h3>
+<p class="text-gray-600">Chơi với bóng, nghe nhạc thiếu nhi, khám phá đồ chơi mới</p>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="w-12 h-12 flex items-center justify-center bg-primary/10 text-primary rounded-full mb-4">
+<i class="ri-phone-line ri-lg"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800 mb-2">Liên Hệ Mẹ</h3>
+<p class="text-gray-600">0332514635</p>
+</div>
+</div>
+<div class="mt-12 bg-white p-8 rounded-lg shadow-md">
+<h3 class="text-2xl font-semibold text-gray-800 mb-6">Mạng Xã Hội</h3>
+<div class="space-y-6">
+<a href="#" class="flex items-center gap-6 p-4 rounded-lg hover:bg-gray-50 transition-colors group">
+<div class="w-24 h-24 rounded-lg overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=cute%20baby%20boy%20social%20media%20profile%2C%20facebook%20style%20photo%2C%20professional%20baby%20photography%2C%20high%20quality&width=200&height=200&seq=11&orientation=squarish" alt="Facebook Profile" class="w-full h-full object-cover">
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 text-primary rounded-full">
+<i class="ri-facebook-fill ri-lg"></i>
+</div>
+<h4 class="font-semibold text-gray-800 group-hover:text-primary transition-colors">Đức An - Baby Model</h4>
+</div>
+<p class="text-gray-600 mb-2">Theo dõi những khoảnh khắc đáng yêu và hành trình làm mẫu của Đức An</p>
+<p class="text-sm text-gray-500">2.5K người theo dõi</p>
+</div>
+</a>
+<a href="#" class="flex items-center gap-6 p-4 rounded-lg hover:bg-gray-50 transition-colors group">
+<div class="w-24 h-24 rounded-lg overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=cute%20baby%20boy%20social%20media%20profile%2C%20instagram%20style%20photo%2C%20lifestyle%20baby%20photography%2C%20high%20quality&width=200&height=200&seq=12&orientation=squarish" alt="Instagram Profile" class="w-full h-full object-cover">
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 text-primary rounded-full">
+<i class="ri-instagram-line ri-lg"></i>
+</div>
+<h4 class="font-semibold text-gray-800 group-hover:text-primary transition-colors">@ducan.babymodel</h4>
+</div>
+<p class="text-gray-600 mb-2">Chia sẻ những khoảnh khắc đẹp và hậu trường chụp hình thú vị</p>
+<p class="text-sm text-gray-500">3.8K người theo dõi</p>
+</div>
+</a>
+<a href="#" class="flex items-center gap-6 p-4 rounded-lg hover:bg-gray-50 transition-colors group">
+<div class="w-24 h-24 rounded-lg overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=cute%20baby%20boy%20social%20media%20profile%2C%20youtube%20thumbnail%20style%2C%20engaging%20baby%20content%2C%20high%20quality&width=200&height=200&seq=13&orientation=squarish" alt="YouTube Channel" class="w-full h-full object-cover">
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 text-primary rounded-full">
+<i class="ri-youtube-line ri-lg"></i>
+</div>
+<h4 class="font-semibold text-gray-800 group-hover:text-primary transition-colors">Đức An Channel</h4>
+</div>
+<p class="text-gray-600 mb-2">Xem video về cuộc sống hàng ngày và các hoạt động thú vị của Đức An</p>
+<p class="text-sm text-gray-500">1.2K người đăng ký</p>
+</div>
+</a>
+<a href="https://www.tiktok.com/@anh_hai_win" class="flex items-center gap-6 p-4 rounded-lg hover:bg-gray-50 transition-colors group">
+<div class="w-24 h-24 rounded-lg overflow-hidden">
+<img 
+  src="https://drive.google.com/uc?id=17uBFi6X25f5WVZzSw-EwbQNlbAUjQgg-" 
+  alt="Mẫu nhí" 
+  width="200" 
+  height="200" 
+  style="object-fit: cover; border-radius: 10px;"
+>
+</div>
+<div class="flex-1">
+<div class="flex items-center gap-3 mb-2">
+<div class="w-8 h-8 flex items-center justify-center bg-primary/10 text-primary rounded-full">
+<i class="ri-tiktok-line ri-lg"></i>
+</div>
+<h4 class="font-semibold text-gray-800 group-hover:text-primary transition-colors">@ducan.baby</h4>
+</div>
+<p class="text-gray-600 mb-2">Những video ngắn vui nhộn và đáng yêu nhất của Đức An</p>
+<p class="text-sm text-gray-500">5K người theo dõi</p>
+</div>
+</a>
+</div>
+</div>
+</section>
+<section id="portfolio" class="mb-20">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-800 mb-2">Bộ Sưu Tập Ảnh</h2>
+<p class="text-gray-600">Những khoảnh khắc đáng yêu của Đức An</p>
+</div>
+<div class="mb-8 flex justify-center">
+<div class="inline-flex bg-gray-100 p-1 rounded-full">
+<button class="px-6 py-2 rounded-full bg-primary text-white whitespace-nowrap">Tất Cả</button>
+<button class="px-6 py-2 rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Trang Phục</button>
+<button class="px-6 py-2 rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Sự Kiện</button>
+<button class="px-6 py-2 rounded-full text-gray-700 hover:bg-gray-200 whitespace-nowrap">Ngẫu Hứng</button>
+</div>
+</div>
+<div class="portfolio-grid">
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+<div class="relative h-80">
+<img
+src="https://readdy.ai/api/search-image?query=adorable%20asian%20baby%20boy%20in%20dog%20costume%2C%201%20year%20old%2C%20professional%20photography%2C%20studio%20lighting%2C%20cute%20pose%2C%20high%20quality%2C%20detailed&width=600&height=800&seq=2&orientation=portrait"
+alt="Bộ Ảnh Trang Phục Chó"
+class="w-full h-full object-cover object-top"
+>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Bộ Ảnh Trang Phục Chó</h3>
+<p class="text-gray-600 text-sm mb-4">Tháng 3, 2025</p>
+<a href="#" class="text-primary font-medium hover:underline">Xem chi tiết</a>
+</div>
+</div>
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+<div class="relative h-80">
+<img
+src="https://readdy.ai/api/search-image?query=cute%20asian%20baby%20boy%20in%20penguin%20costume%2C%201%20year%20old%2C%20professional%20photography%2C%20studio%20lighting%2C%20adorable%20pose%2C%20high%20quality%2C%20detailed&width=600&height=800&seq=3&orientation=portrait"
+alt="Bộ Ảnh Trang Phục Chim Cánh Cụt"
+class="w-full h-full object-cover object-top"
+>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Bộ Ảnh Trang Phục Chim Cánh Cụt</h3>
+<p class="text-gray-600 text-sm mb-4">Tháng 4, 2025</p>
+<a href="#" class="text-primary font-medium hover:underline">Xem chi tiết</a>
+</div>
+</div>
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+<div class="relative h-80">
+<img
+src="https://readdy.ai/api/search-image?query=asian%20baby%20boy%20in%20traditional%20vietnamese%20outfit%2C%201%20year%20old%2C%20professional%20photography%2C%20studio%20lighting%2C%20cultural%20celebration%2C%20high%20quality%2C%20detailed&width=600&height=800&seq=4&orientation=portrait"
+alt="Bộ Ảnh Tết Nguyên Đán"
+class="w-full h-full object-cover object-top"
+>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Bộ Ảnh Tết Nguyên Đán</h3>
+<p class="text-gray-600 text-sm mb-4">Tháng 1, 2025</p>
+<a href="#" class="text-primary font-medium hover:underline">Xem chi tiết</a>
+</div>
+</div>
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+<div class="relative h-80">
+<img
+src="https://readdy.ai/api/search-image?query=cute%20asian%20baby%20boy%20playing%20with%20toys%2C%201%20year%20old%2C%20candid%20photography%2C%20natural%20lighting%2C%20playful%20moment%2C%20high%20quality%2C%20detailed&width=600&height=800&seq=5&orientation=portrait"
+alt="Khoảnh Khắc Vui Chơi"
+class="w-full h-full object-cover object-top"
+>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Khoảnh Khắc Vui Chơi</h3>
+<p class="text-gray-600 text-sm mb-4">Tháng 5, 2025</p>
+<a href="#" class="text-primary font-medium hover:underline">Xem chi tiết</a>
+</div>
+</div>
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+<div class="relative h-80">
+<img
+src="https://readdy.ai/api/search-image?query=asian%20baby%20boy%20with%20birthday%20cake%2C%201%20year%20old%2C%20celebration%20photography%2C%20colorful%20background%2C%20happy%20moment%2C%20high%20quality%2C%20detailed&width=600&height=800&seq=6&orientation=portrait"
+alt="Sinh Nhật Đầu Tiên"
+class="w-full h-full object-cover object-top"
+>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Sinh Nhật Đầu Tiên</h3>
+<p class="text-gray-600 text-sm mb-4">Tháng 12, 2024</p>
+<a href="#" class="text-primary font-medium hover:underline">Xem chi tiết</a>
+</div>
+</div>
+<div class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow">
+<div class="relative h-80">
+<img
+src="https://readdy.ai/api/search-image?query=asian%20baby%20boy%20in%20summer%20outfit%20at%20beach%2C%201%20year%20old%2C%20outdoor%20photography%2C%20natural%20lighting%2C%20vacation%20mood%2C%20high%20quality%2C%20detailed&width=600&height=800&seq=7&orientation=portrait"
+alt="Kỳ Nghỉ Biển"
+class="w-full h-full object-cover object-top"
+>
+</div>
+<div class="p-4">
+<h3 class="text-lg font-semibold text-gray-800 mb-2">Kỳ Nghỉ Biển</h3>
+<p class="text-gray-600 text-sm mb-4">Tháng 6, 2025</p>
+<a href="#" class="text-primary font-medium hover:underline">Xem chi tiết</a>
+</div>
+</div>
+</div>
+<div class="mt-10 text-center">
+<button class="bg-white border border-gray-300 text-gray-700 px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-gray-50 transition-colors">
+Xem Thêm Ảnh
+</button>
+</div>
+</section>
+<section id="contact" class="mb-20">
+<div class="bg-white rounded-lg shadow-lg overflow-hidden">
+<div class="flex flex-col md:flex-row">
+<div class="w-full md:w-1/2 bg-primary/10 p-8 md:p-12">
+<h2 class="text-3xl font-bold text-gray-800 mb-6">Liên Hệ Với Chúng Tôi</h2>
+<p class="text-gray-600 mb-8">Nếu bạn quan tâm đến việc hợp tác với Đức An cho các dự án chụp ảnh, quảng cáo hoặc sự kiện, vui lòng liên hệ với chúng tôi qua form bên cạnh hoặc thông tin dưới đây:</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/20 text-primary rounded-full mt-1">
+<i class="ri-phone-line ri-lg"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-800 mb-1">Điện Thoại</h3>
+<p class="text-gray-600">0332514635</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/20 text-primary rounded-full mt-1">
+<i class="ri-mail-line ri-lg"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-800 mb-1">Email</h3>
+<p class="text-gray-600">ducan.model@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/20 text-primary rounded-full mt-1">
+<i class="ri-map-pin-line ri-lg"></i>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-gray-800 mb-1">Địa Chỉ</h3>
+<p class="text-gray-600">Thành phố Hồ Chí Minh, Việt Nam</p>
+</div>
+</div>
+</div>
+</div>
+<div class="w-full md:w-1/2 p-8 md:p-12">
+<form>
+<div class="mb-6">
+<label for="name" class="block text-sm font-medium text-gray-700 mb-2">Họ và Tên</label>
+<input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Nhập họ và tên của bạn">
+</div>
+<div class="mb-6">
+<label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+<input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Nhập địa chỉ email của bạn">
+</div>
+<div class="mb-6">
+<label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Số Điện Thoại</label>
+<input type="tel" id="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Nhập số điện thoại của bạn">
+</div>
+<div class="mb-6">
+<label for="message" class="block text-sm font-medium text-gray-700 mb-2">Nội Dung</label>
+<textarea id="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary" placeholder="Nhập nội dung tin nhắn của bạn"></textarea>
+</div>
+<div class="mb-6 flex items-center">
+<label class="custom-switch">
+<input type="checkbox" checked>
+<span class="slider"></span>
+</label>
+<span class="ml-3 text-sm text-gray-600">Tôi đồng ý nhận thông tin cập nhật qua email</span>
+</div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button whitespace-nowrap font-medium hover:bg-primary/90 transition-colors">
+Gửi Tin Nhắn
+</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section class="mb-20">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold text-gray-800 mb-2">Đánh Giá Từ Khách Hàng</h2>
+<p class="text-gray-600">Những chia sẻ từ các nhãn hàng đã hợp tác với Đức An</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Đức An rất dễ thương và hợp tác tốt trong suốt buổi chụp. Các bức ảnh đều rất tự nhiên và đáng yêu, đúng với yêu cầu của chúng tôi."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20asian%20woman%20portrait%2C%20marketing%20director%2C%20business%20attire%2C%20neutral%20background%2C%20high%20quality&width=100&height=100&seq=8&orientation=squarish" alt="Nguyễn Thị Minh Tâm" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Nguyễn Thị Minh Tâm</h4>
+<p class="text-sm text-gray-600">Giám đốc Marketing, Baby Shop</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Chúng tôi đã có một trải nghiệm tuyệt vời khi làm việc với Đức An. Em bé rất vui vẻ và phản ứng tốt với máy ảnh, giúp chúng tôi có được những khoảnh khắc đẹp nhất."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20asian%20man%20portrait%2C%20photographer%2C%20casual%20smart%20attire%2C%20neutral%20background%2C%20high%20quality&width=100&height=100&seq=9&orientation=squarish" alt="Trần Văn Hùng" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Trần Văn Hùng</h4>
+<p class="text-sm text-gray-600">Nhiếp ảnh gia, Kids Studio</p>
+</div>
+</div>
+</div>
+<div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+<div class="flex items-center mb-4">
+<div class="text-yellow-400 flex">
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-fill ri-lg"></i>
+<i class="ri-star-half-fill ri-lg"></i>
+</div>
+</div>
+<p class="text-gray-600 mb-6">"Đức An là một người mẫu nhí rất tiềm năng. Dù còn nhỏ nhưng em đã thể hiện rất tốt trước ống kính và mang lại những hình ảnh đáng yêu cho thương hiệu của chúng tôi."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-200 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=professional%20asian%20woman%20portrait%2C%20fashion%20designer%2C%20stylish%20outfit%2C%20neutral%20background%2C%20high%20quality&width=100&height=100&seq=10&orientation=squarish" alt="Lê Thị Hương" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-semibold text-gray-800">Lê Thị Hương</h4>
+<p class="text-sm text-gray-600">Nhà thiết kế, Little Fashion</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-gray-900 text-white">
+<div class="container mx-auto px-4 py-12">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<div>
+<div class="text-3xl font-['Pacifico'] text-primary mb-4">Đức An</div>
+<p class="text-gray-400 mb-6">Người mẫu nhí chuyên nghiệp với nụ cười tỏa nắng và sự hợp tác tuyệt vời.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+<i class="ri-facebook-fill ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+<i class="ri-instagram-line ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+<i class="ri-youtube-line ri-lg"></i>
+</a>
+<a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+<i class="ri-tiktok-line ri-lg"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Liên Kết Nhanh</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Trang Chủ</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">Giới Thiệu</a></li>
+<li><a href="#portfolio" class="text-gray-400 hover:text-primary transition-colors">Bộ Sưu Tập</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-primary transition-colors">Liên Hệ</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Dịch Vụ</h3>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Chụp Ảnh Quảng Cáo</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Chụp Ảnh Thời Trang</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Sự Kiện</a></li>
+<li><a href="#" class="text-gray-400 hover:text-primary transition-colors">Video Quảng Cáo</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold mb-4">Liên Hệ</h3>
+<ul class="space-y-3">
+<li class="flex items-center gap-3">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full">
+<i class="ri-phone-line ri-lg"></i>
+</div>
+<span class="text-gray-400">0332514635</span>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full">
+<i class="ri-mail-line ri-lg"></i>
+</div>
+<span class="text-gray-400">ducan.model@gmail.com</span>
+</li>
+<li class="flex items-center gap-3">
+<div class="w-8 h-8 flex items-center justify-center bg-gray-800 rounded-full">
+<i class="ri-map-pin-line ri-lg"></i>
+</div>
+<span class="text-gray-400">Thành phố Hồ Chí Minh, Việt Nam</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Nguyễn Hoàng Đức An. Tất cả các quyền được bảo lưu.</p>
+<div class="flex space-x-6">
+<a href="#" class="text-gray-400 text-sm hover:text-primary transition-colors">Chính Sách Bảo Mật</a>
+<a href="#" class="text-gray-400 text-sm hover:text-primary transition-colors">Điều Khoản Sử Dụng</a>
+</div>
+</div>
+</div>
+</footer>
+<script id="portfolioTabs">
+document.addEventListener('DOMContentLoaded', function() {
+const tabButtons = document.querySelectorAll('#portfolio .inline-flex button');
+tabButtons.forEach(button => {
+button.addEventListener('click', function() {
+// Remove active class from all buttons
+tabButtons.forEach(btn => {
+btn.classList.remove('bg-primary', 'text-white');
+btn.classList.add('text-gray-700', 'hover:bg-gray-200');
+});
+// Add active class to clicked button
+this.classList.add('bg-primary', 'text-white');
+this.classList.remove('text-gray-700', 'hover:bg-gray-200');
+// Here you would normally filter the portfolio items
+// For this demo, we're just changing the button styles
+});
+});
+});
+</script>
+<script id="contactForm">
+document.addEventListener('DOMContentLoaded', function() {
+const form = document.querySelector('#contact form');
+if (form) {
+form.addEventListener('submit', function(e) {
+e.preventDefault();
+// Get form values
+const name = document.getElementById('name').value;
+const email = document.getElementById('email').value;
+const phone = document.getElementById('phone').value;
+const message = document.getElementById('message').value;
+// Validate form (simple validation)
+if (!name || !email || !message) {
+alert('Vui lòng điền đầy đủ thông tin bắt buộc!');
+return;
+}
+// Here you would normally send the form data to a server
+// For this demo, we'll just show a success message
+alert('Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi trong thời gian sớm nhất.');
+form.reset();
+});
+}
+});
+</script>
+<script id="mobileMenu">
+document.addEventListener('DOMContentLoaded', function() {
+const menuButton = document.querySelector('nav button');
+const menuItems = document.querySelector('nav .hidden');
+if (menuButton && menuItems) {
+menuButton.addEventListener('click', function() {
+menuItems.classList.toggle('hidden');
+menuItems.classList.toggle('flex');
+menuItems.classList.toggle('flex-col');
+menuItems.classList.toggle('absolute');
+menuItems.classList.toggle('top-16');
+menuItems.classList.toggle('right-4');
+menuItems.classList.toggle('bg-white');
+menuItems.classList.toggle('shadow-lg');
+menuItems.classList.toggle('p-4');
+menuItems.classList.toggle('rounded-lg');
+menuItems.classList.toggle('z-50');
+});
+}
+});
+</script>
+</body>
+</html>
