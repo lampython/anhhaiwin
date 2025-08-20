@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HTMLImageEditorUI</class>
+ <widget class="QWidget" name="HTMLImageEditorUI">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1504</width>
+    <height>857</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>🖼️ HTML Image &amp; Link Editor</string>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>13</y>
+     <width>1308</width>
+     <height>718</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_5">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QPushButton" name="btn_open">
+        <property name="text">
+         <string>📂 Chọn file HTML</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_redo">
+        <property name="text">
+         <string>↪️ Redo</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btn_undo">
+        <property name="text">
+         <string>↩️ Undo</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pushButton_ovewrite_html">
+        <property name="text">
+         <string>overwrite html</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_5">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QLabel" name="label_href_2">
+            <property name="text">
+             <string>HREF</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="list_widget_href"/>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="label_img">
+            <property name="text">
+             <string>IMG</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="list_widget_img"/>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_url1">
+            <property name="text">
+             <string>URL</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="list_widget_url"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <layout class="QHBoxLayout" name="previewLayout">
+          <item>
+           <layout class="QVBoxLayout" name="previewCurrentLayout">
+            <item>
+             <widget class="QLabel" name="preview_current">
+              <property name="minimumSize">
+               <size>
+                <width>380</width>
+                <height>280</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>🖼️ Ảnh gốc</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="preview_current_info"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QVBoxLayout" name="previewNewLayout">
+            <item>
+             <widget class="QLabel" name="preview_new">
+              <property name="minimumSize">
+               <size>
+                <width>380</width>
+                <height>280</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>🔕 Ảnh mới</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="preview_new_info"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_chon">
+              <property name="text">
+               <string>CHỌN</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="lineEdit_chon">
+              <property name="font">
+               <font>
+                <weight>75</weight>
+                <italic>false</italic>
+                <bold>true</bold>
+                <kerning>false</kerning>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">QLineEdit {
+    background-color: #fffdb7;
+    border: 1px solid gray;
+    padding: 3px;
+}</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_linkanh">
+            <item>
+             <widget class="QLabel" name="label_linkanh">
+              <property name="text">
+               <string>LINK ẢNH</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="input_linkanh"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_replace_linkanh">
+              <property name="text">
+               <string>🔄 Thay ảnh</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="linkReplaceLayout_href">
+            <item>
+             <widget class="QLabel" name="label_href">
+              <property name="text">
+               <string>HREF</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="input_link_href"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_replace_href">
+              <property name="text">
+               <string>🔗 Thay href</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="linkReplaceLayout_url">
+            <item>
+             <widget class="QLabel" name="label_url">
+              <property name="text">
+               <string>URL</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="input_link_url"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_replace_url">
+              <property name="text">
+               <string>🔗 Thay url</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="search_text_input">
+            <property name="placeholderText">
+             <string>🔍 Tìm nội dung văn bản</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QListWidget" name="text_results"/>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLineEdit" name="input_text_edit">
+              <property name="placeholderText">
+               <string>✏️ Nhập nội dung mới...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_replace_text">
+              <property name="text">
+               <string>📝 Sửa nội dung</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
