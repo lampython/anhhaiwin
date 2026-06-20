@@ -1,0 +1,8 @@
+{
+  "name": "Trình tạo 2FA & Ủng hộ AnhHaiWin",
+  "description": "Công cụ tạo mã bảo mật 2FA miễn phí, hỗ trợ quyên góp qua Vietcombank và tăng tương tác Shopee, TikTok, Facebook để duy trì hoạt động.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
